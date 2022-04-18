@@ -1,4 +1,4 @@
-package com.udemy.spring.inversion_of_control;
+package com.udemy.spring.spring_introduction;
 
 public class Test1 {
 	
@@ -7,5 +7,5 @@ public class Test1 {
 		Pet pet = new Cat();
 		pet.say();
 	}
-
+	
 }

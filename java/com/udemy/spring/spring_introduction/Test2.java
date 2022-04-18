@@ -1,4 +1,4 @@
-package com.udemy.spring.inversion_of_control;
+package com.udemy.spring.spring_introduction;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -6,12 +6,11 @@ public class Test2 {
 	public static void main(String[] args) {
 		
 		ClassPathXmlApplicationContext context = 
-				new ClassPathXmlApplicationContext("applicationContext_IOC.xml");
+				new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		Pet pet = context.getBean("myPet", Pet.class);
 		pet.say();
-		context.close();
-		
+		context.close();		
 
 	}
 

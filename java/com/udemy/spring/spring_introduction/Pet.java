@@ -1,4 +1,4 @@
-package com.udemy.spring.inversion_of_control;
+package com.udemy.spring.spring_introduction;
 
 public interface Pet {
 	public void say();	
