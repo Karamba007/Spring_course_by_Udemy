@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class University {
 	
-	private List<Student> students = new ArrayList<>();
+	private List<Student> students = new ArrayList<Student>();
 	
 	public void addStudents() {
 		Student st1 = new Student("Kosaty Vitali", 4, 7.5);
