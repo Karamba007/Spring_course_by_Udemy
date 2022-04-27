@@ -1,8 +1,13 @@
-package com.udemy.spring.hibernate_test.entity;
+package com.udemy.spring.hibernate.table_association.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -10,6 +15,7 @@ import javax.persistence.Table;
 public class Employee {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
 	
@@ -24,6 +30,10 @@ public class Employee {
 	
 	@Column(name="salary")
 	private int salary;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "details_id")
+	private Detail empDetail;
 	
 	public Employee() {
 		
@@ -82,6 +92,5 @@ public class Employee {
 		return "Employee [id=" + id + ", name=" + name + ", surName=" + surName + ", department=" + department
 				+ ", salary=" + salary + "]";
 	}
-	
-	
+
 }
