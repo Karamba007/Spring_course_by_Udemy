@@ -1,4 +1,4 @@
-package com.udemy.spring.hibernate.table_association.entity;
+package com.udemy.spring.hibernate.one_to_one.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -39,8 +39,8 @@ public class Employee {
 		
 	}
 
-	public Employee(String name, String surName, String department, int salary) {		
-		this.id = id;
+	public Employee(String name, String surName, String department, int salary) {	
+		
 		this.name = name;
 		this.surName = surName;
 		this.department = department;
@@ -85,6 +85,14 @@ public class Employee {
 
 	public void setSalary(int salary) {
 		this.salary = salary;
+	}
+
+	public Detail getEmpDetail() {
+		return empDetail;
+	}
+
+	public void setEmpDetail(Detail empDetail) {
+		this.empDetail = empDetail;
 	}
 
 	@Override

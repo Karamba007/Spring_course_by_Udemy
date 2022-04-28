@@ -1,10 +1,12 @@
-package com.udemy.spring.hibernate.table_association.entity;
+package com.udemy.spring.hibernate.one_to_one.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -25,12 +27,14 @@ public class Detail {
 	@Column(name = "email")
 	private String email;
 	
+	@OneToOne(mappedBy = "empDetail", cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
+	private Employee employee;
+
 	public Detail() {
 		
 	}
 
-	public Detail(String city, String phoneNumber, String email) {		
-		this.id = id;
+	public Detail(String city, String phoneNumber, String email) {
 		this.city = city;
 		this.phoneNumber = phoneNumber;
 		this.email = email;
@@ -66,6 +70,14 @@ public class Detail {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
 	}
 
 	@Override
