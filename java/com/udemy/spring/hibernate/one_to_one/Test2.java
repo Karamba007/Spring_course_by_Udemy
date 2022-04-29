@@ -37,6 +37,7 @@ public class Test2 {
 //			session.save(employee);
 //			session.getTransaction().commit();
 			
+//***************************************************************************
 			
 //			// Получение из базы информации о работнике по его id_detail из таблицы detail
 //			session.beginTransaction();
@@ -47,6 +48,7 @@ public class Test2 {
 //			
 //			System.out.println("Done");
 			
+//***************************************************************************
 			
 //			// Удаление записи из таблицы details и связанной с ней записью в employees
 //			session.beginTransaction();
@@ -57,6 +59,7 @@ public class Test2 {
 //			
 //			System.out.println("Done");
 			
+//***************************************************************************
 			
 			// Для удаления при One-to-One bi-directional только записи detail
 			// и не трогать связанную запись employee
